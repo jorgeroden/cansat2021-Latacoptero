@@ -41,7 +41,8 @@ void loop()
 
   // Datos a SD
   if (ultimoSalvaSD != salvaSD) {
-
+    //TODO: Separar la cadena "datos" en subcadenas. 
+    //Cuando falla una de las funciones "get" la cadena "datos" se queda vacía
     datos = getPressTemp() + "," + getUV();// Añadir el resto de datos
     writeSD(datos);//funcion para guardar todos los datos en la SD
     Serial.println("grabado en SD.");
